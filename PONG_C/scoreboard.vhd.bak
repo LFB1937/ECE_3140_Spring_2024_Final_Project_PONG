@@ -1,0 +1,505 @@
+case(digit) is
+	when 0 =>
+		if((row > 32 and row < 40) or (row > 63 and row < 72)) then
+			if(column > 255 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif((row > 39 and row < 64) then
+			if((column > 247 and column < 256) or (column > 271 and column < 280)) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when 1 =>
+		if((row > 32 and row < 40) or (row > 47 and row < 64)) then
+			if(column > 255 and column < 264) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 39 and row < 48) then
+			if(column > 247 and column < 264) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 63 and row < 72) then
+			if(column > 247 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when 2 =>
+		if(row > 32 and row < 40) then
+			if(column > 255 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 39 and row < 48) then
+			if((column > 247 and column < 256) or (column > 271 and column < 280)) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 47 and row < 56) then
+			if(column > 263 and column < 280) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 55 and row < 64) then
+			if(column > 255 and column < 264) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 63 and row < 72) then
+			if(column > 247 and column < 280) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when 3 =>
+		if((row > 32 and row < 40) or (row > 63 and row < 72)) then
+			if(column > 247 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif((row > 39 and row < 48) or (row > 55 and row < 64)) then
+			if(column > 271 and column < 280) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 47 and row < 56) then
+			if(column > 255 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when 4 =>
+		if(row > 32 and row < 48) then
+			if((column > 247 and column < 256) or (column > 263 and column < 272)) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 47 and row < 56) then
+			if(column > 247 and column < 280) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 55 and row < 72) then
+			if(column > 263 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when 5 =>
+		if(row > 32 and row < 40) then
+			if(column > 255 and column < 280) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 39 and row < 48) then
+			if(column > 247 and column < 256) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif((row > 47 and row < 56) or (row > 63 and row < 72)) then
+			if(column > 247 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 55 and row < 64) then
+			if(column > 271 and column < 280) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when 6 =>
+		if(row > 32 and row < 40) then
+			if(column > 255 and column < 280) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 39 and row < 48) then
+			if(column > 247 and column < 256) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif((row > 47 and row < 56) or (row > 63 and row < 72)) then
+			if(column > 247 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 55 and row < 64) then
+			if((column > 247 and column < 256) or (column > 271 and column < 280)) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when 7 => 
+		if(row > 32 and row < 40) then
+			if(column > 247 and column < 280) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 39 and row < 48) then
+			if(column > 271 and column < 280) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 47 and row < 56) then
+			if(column > 263 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 55 and row < 72) then
+			if(column > 255 and column < 264) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when 8 =>
+		if((row > 32 and row < 40) or (row > 47 and row < 56) or (row > 63 and row < 72)) then
+			if(column > 255 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif((row > 39 and row < 48) or (row > 55 and row < 64)) then
+			if((column > 247 and column < 256) or (column > 271 and column < 280)) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when 9 =>
+		if((row > 32 and row < 40) or (row > 47 and row < 56)) then
+			if(column > 255 and column < 280) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 39 and row < 48) then
+			if((column > 247 and column < 256) or (column > 271 and column < 280)) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 55 and row < 72) then
+			if(column > 271 and column < 280) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when 10 =>
+		if(row > 32 and row < 40) then
+			if(column > 215 and column < 224) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			elsif(column > 255 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 39 and row < 48) then
+			if(column > 207 and column < 224) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			elsif((column > 247 and column < 256) or (column > 271 and column < 280)) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+		elsif(row > 47 and row < 64) then
+			if(column > 215 and column < 224) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			elsif((column > 247 and column < 256) or (column > 271 and column < 280)) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 63 and row < 72) then
+			if(column > 207 and column < 232) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			elsif(column > 255 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when 11 =>
+		if((row > 32 and row < 40) or (row > 47 and row < 64)) then
+			if(column > 215 and column < 224) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			elsif(column > 255 and column < 264) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 39 and row < 48) then
+			if(column > 207 and column < 224) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			elsif(column > 247 and column < 264) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		elsif(row > 63 and row < 72) then
+			if(column > 207 and column < 232) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			elsif(column > 247 and column < 272) then
+				green_m <= (others => '1');
+				red_m <= (others => '1');
+				blue_m <= (others => '1');
+			else
+				green_m <= (others => '0');
+				red_m <= (others => '0');
+				blue_m <= (others => '0');
+			end if;
+		else
+			green_m <= (others => '0');
+			red_m <= (others => '0');
+			blue_m <= (others => '0');
+		end if;
+	when others =>
+		green_m <= (others => '0');
+		red_m <= (others => '0');
+		blue_m <= (others => '0');
+end case;
