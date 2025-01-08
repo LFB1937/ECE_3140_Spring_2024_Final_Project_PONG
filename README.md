@@ -109,6 +109,33 @@ The HTML file "project_pong.rst" contains all of the design requirements and spe
 
 	- displays the player 1 on the left of the border and the player 2 on the right of the border.
 
+-- Implementation for PongC
+
+    - has two paddles, one on the right side and one on the left side. Both are operated by a single rotary encoder.
+        counterclockwise turns make the paddle turn down, clockwise turns make the paddle turn up.
+
+    - KEY0 resets the ball position, 7-segment displays, right score count, and the left score count.
+
+    - HEX0 & HEX1 display the right score count, while HEX5 & HEX4 display the left score count.
+
+    - locks the paddle and the position of the ball in the center of the board when either score count reaches 11, signifying that the game is over.
+
+    - applies "English Spin" on the ball when it hits the paddle from the very top or the very bottom. No spin is applied if it hits the center of the paddle.
+
+    - alternates colors for the border, middle border, and numbers display upon every set in the game.
+
+    - changes the background display when a player is winning.
+
+    - the buzzer ticks every time the ball hits the border or paddle.
+
+    - displays Player 1 on the left side of the border and Player 2 on the right side of the border.
+
+    - paddles are color-coded:
+        left paddle: red
+        right paddle: blue
+
+    - the ball changes colors, shrinks, and speeds up during long volley counts.
+
 	- the paddles are color coded, left is red and right is blue.
 
 	- the ball changes colors, shrinks, and speeds up for long volley counts.
