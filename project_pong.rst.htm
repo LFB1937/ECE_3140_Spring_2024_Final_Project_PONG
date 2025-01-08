@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<title>project_pong.rst</title>
+<link rel="stylesheet" href="http://jwbruce.info/css/lsrttu.css" type="text/css" />
+</head>
+<body>
+<div class="document">
+
+
+<div class="section" id="ece-3140-digital-systems-design">
+<h1>ECE 3140 -- Digital Systems Design</h1>
+<div class="section" id="spring-2024-project-pong-specification">
+<h2>Spring 2024 Project PONG Specification</h2>
+<p>Any HDL developed should follow the <em>best practices</em> for
+writing your VHDL given in the <a class="reference external" href="http://jwbruce.info/teaching/ece3140/files/vhdl_guidelines.html">ECE3140 VHDL Guidelines</a>.
+All HDL should be documented thoroughly about its use and limitations.
+All HDL should be accompanied by a testbench that exercises
+the design fully (or in a logically complete manner for large
+designs).  Testbenches should have judicious use of <strong>assert</strong>
+and <strong>report</strong> statements to clearly indicate proper function
+of the UUT.</p>
+<p>Development of any &quot;logic&quot; primitives, e.g. gates, flip-flops,
+larger basic blocks, etc. should be incorporated into your
+local copy of the <a class="reference external" href="http://jwbruce.info/teaching/ece3140/files/ttu.vhdl">ttu.vhdl</a> library.  <em>You might find these
+useful for your project.</em></p>
+<p>This homework must be submitted to <a class="reference external" href="https://ilearn.tntech.edu">iLearn</a> in accordance with
+the <a class="reference external" href="./s24/hw/Qsubmit.html">Quartus Submission</a> instructions. Make only one submission
+per team.</p>
+<p>Tutorials and assistance for the <a class="reference external" href="https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&amp;No=1021">DE10-Lite</a> have been provided.</p>
+</div>
+</div>
+<div class="section" id="pong-practice-game">
+<h1>Pong practice game</h1>
+<p>For this part, capture your submissions in a folder/project
+called <em>pong1</em>.  Prepare this folder and its files in
+accordance with <a class="reference external" href="./s24/hw/Qsubmit.html">Quartus Submission</a>.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Pong">Pong</a> is a seminal
+design in gaming and was released in November 1972 by <a class="reference external" href="https://en.wikipedia.org/wiki/Atari,_Inc.">Atari</a>.
+It was
+the first video game to acheive widescale popularity and
+market penetration.  Pong defined the formula for early video
+game success: a simple game that is surprisingly hard to defeat.
+Your goal is to recreate the earliest days of video game
+history in a 21st century FPGA.</p>
+<img alt="./Pong_Game_Test2.gif" src="./Pong_Game_Test2.gif" />
+<p>Using your IP developed in previous homework, develop
+a VGA (640x480 &#64; 60Hz) application that allows for the
+budding Pong champion to practice their skills.  In this
+game, the player turns the paddle (the provided
+<a class="reference external" href="https://en.wikipedia.org/wiki/Rotary_encoder">rotary encoder</a>)
+to move a paddle up and down on the screen.  The goal
+is to &quot;volley&quot; the ball against a &quot;wall&quot; on the opposite
+side of the playing field.  The ball will bounce off three
+sides (left, top, and bottom) such that the departure angle
+is the same as the incidence angle.</p>
+<img alt="./pong0.png" src="./pong0.png" />
+<p>At the beginning of each &quot;set&quot;, a ball will be injected into
+the playing field at &quot;mid-court&quot;.</p>
+<p>If the player misses the ball, the ball will exit the playing
+field, and a &quot;miss count&quot; on the left two segment seven displays
+will increment.  The practice session will end when the &quot;miss
+count&quot; gets to 11.</p>
+<p>Each time the ball bounces off of the opposite (left) wall,
+a counter will increment on the three right-most
+segment-seven displays.  Pressing <strong>KEY0</strong> will reset
+the score and the miss count to 0.</p>
+</div>
+<div class="section" id="two-player-pong-game">
+<h1>Two-player pong game</h1>
+<p>For this part, capture your submissions in a folder/project
+called <em>pong2</em>.  Prepare this folder and its files in
+accordance with <a class="reference external" href="./s24/hw/Qsubmit.html">Quartus Submission</a>.</p>
+<p>Using your IP developed in previous homework, develop
+a VGA (640x480 &#64; 60Hz) application that allows for two-player
+Pong action.  Connect a <a class="reference external" href="https://en.wikipedia.org/wiki/Rotary_encoder">rotary encoder</a> to your FPGA
+board.</p>
+<img alt="./pong1.png" src="./pong1.png" />
+<p>In this game, the players turns their paddles to move
+their paddles up and down on the screen.  The goal
+is to &quot;volley&quot; the ball until a player misses the ball with
+their paddle.  The ball will bounce off two playing field
+walls (top and bottom) such that the departure angle
+is the same as the incidence angle.  Balls will bounce
+of of paddles similarly.</p>
+<p>At the beginning of each &quot;set&quot;, a ball will be injected into
+the playing field at &quot;mid-court&quot;.</p>
+<p>If the player misses the ball, the ball will exit the playing
+field, and a point will be awarded to the opposing player.
+Score will be kept on the leftmost-two (left player) and
+rightmost-two (right player) segment seven displays.
+Play will continue until one player reaches a score of 11.</p>
+<p>Pressing <strong>KEY0</strong> will reset the game.</p>
+</div>
+<div class="section" id="alternate-controller-option">
+<h1>Alternate controller option</h1>
+<p>For this option, capture your submissions in a folder/project
+called <em>pong1a</em> and <em>pong2a</em> for the one-player and two-player
+versions, respectively.  Prepare this folder and its files in
+accordance with <a class="reference external" href="./s24/hw/Qsubmit.html">Quartus Submission</a>.</p>
+<p>The DE10-Lite board has an
+<a class="reference external" href="https://www.analog.com/en/products/adxl345.html#">Analog Devices ADXL345 accelerometer</a>
+on-board.  The
+<a class="reference external" href="http://jwbruce.info/teaching/ece3140/datasheets/ADXL345.pdf">ADXL345 datasheet</a> is provided in the datasheet folder.
+Adjust your &quot;Pong Practice Game&quot; such that the paddle is
+controlled by the player tilting the FPGA board left and right
+instead of the turning the &quot;paddle&quot;.</p>
+</div>
+<div class="section" id="improved-pong">
+<h1>Improved Pong</h1>
+<p>For this part, capture your submissions in a folder/project
+called <em>pong1b</em> and <em>pong2b</em> for the one-player and two-player
+versions, respectively.  Prepare this folder and its files in
+accordance with <a class="reference external" href="./s24/hw/Qsubmit.html">Quartus Submission</a>.</p>
+<p>Add on-screen scoring as shown below to create a Pong
+video game that closely mimics the look of the 1970s
+arcade original from Atari.</p>
+<img alt="./pong2.png" src="./pong2.png" />
+<p>Devise a systematic and attractive use of color for your Pong
+game(s).  The original zero-zero set will be in
+the original black-and-white as shown above.
+Each subsequent set will have a different color scheme.
+Provide colorful indication of especially long volleys, and/or
+dramatic shots/saves.</p>
+<p>Additionally, this improved <a class="reference external" href="https://en.wikipedia.org/wiki/Pong">Pong</a> game should add the
+ability to hit the ball
+<a class="reference external" href="https://www.quora.com/What-does-it-mean-to-put-English-on-the-ball">English</a>.
+If the ball were hit by a moving paddle or on the paddle corner,
+then the ball velocity increased slightly and/or ball direction
+is modified accordingly.  Aim for a reasonable user experience
+in this regard.</p>
+<p>Using your
+<a class="reference external" href="http://jwbruce.info/teaching/ece3140/datasheets/PS1240P02BT.pdf">TDK PS1240P02BY</a>
+<a class="reference external" href="https://en.wikipedia.org/wiki/Piezoelectric_speaker">piezoelectric buzzer</a>,
+add appropriate sound effects to your game.</p>
+</div>
+<div class="section" id="flashed-fpga-bitstream">
+<h1>Flashed FPGA bitstream</h1>
+<p>All semester our FGPA configuration bitstreams have been
+loaded onto the target after power-up and just prior to
+demonstration. Obviously, this is not practical for a
+shipping device.  The target FPGA board has configuration
+flash memory that can hold FPGA bitstreams that are loaded
+into the FPGA via JTAG programming on power-up.</p>
+<p>Deploy one (or two) different project options of your <a class="reference external" href="https://en.wikipedia.org/wiki/Pong">Pong</a>
+game configurations into the flash memory. Demonstrate its operation
+at the submission deadline.</p>
+</div>
+<div class="section" id="grading">
+<h1>GRADING</h1>
+<p>Projects are graded on a 100-point scale.
+The maximum <em>potential</em> project points will be determined
+by the correctly-functioning project options:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="80%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Option</th>
+<th class="head">Points (max)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Base: working complete base project (<em>pong1</em> or <em>pong2</em>)</td>
+<td>80</td>
+</tr>
+<tr><td>Both base projects (<em>pong1</em> and <em>pong2</em>)</td>
+<td>90</td>
+</tr>
+<tr><td>Base + one option: <em>pongX</em> + (<em>pongXa</em> or <em>pongXb</em>)</td>
+<td>90</td>
+</tr>
+<tr><td>Base + both options: <em>pongX</em> + (<em>pongXa</em> and <em>pongXb</em>)</td>
+<td>100</td>
+</tr>
+<tr><td>Super-acheiver: both bases with both options</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<p>No projects will be accepted after 21 April &#64; 2359.</p>
+<p>Good luck.</p>
+</div>
+<div class="section" id="history">
+<h1>HISTORY</h1>
+<dl class="docutils">
+<dt>5 MARCH</dt>
+<dd>Original specification release</dd>
+</dl>
+</div>
+</div>
+</body>
+</html>
